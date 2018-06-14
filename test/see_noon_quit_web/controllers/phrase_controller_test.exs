@@ -1,4 +1,4 @@
-defmodule SeeNoonQuitWeb.PageControllerTest do
+defmodule SeeNoonQuitWeb.PhraseControllerTest do
   use SeeNoonQuitWeb.ConnCase
 
   test "GET /", %{conn: conn} do

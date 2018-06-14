@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>SeeNoonQuit</h1>
+
+  <%= form_for @conn, Routes.phrase_path(@conn, :show),
+    [method: :get, enforce_utf8: false], fn f -> %>
+
+    <%= text_input f, :phrase, value: nil %>
+  <% end %>
+
+  <%= if @phrase do %>
+    <h2><%= @phrase %></h2>
+
+    <ul>
+      <%= for anagram <- @anagrams do %>
+        <li><%= anagram %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
