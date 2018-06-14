@@ -6,10 +6,11 @@
 
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
 
-    <title>SeeNoonQuit</title>
+    <title>See Noon Quit</title>
   </head>
 
   <body>
+    <%= render SeeNoonQuitWeb.LayoutView, "navbar.html", conn: @conn %>
     <%= render @view_module, @view_template, assigns %>
 
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>

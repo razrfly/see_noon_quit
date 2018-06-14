@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <%= link "See Noon Quit", to: Routes.phrase_path(@conn, :show),
+      class: "navbar-brand" %>
+
+    <div class="collapse navbar-collapse">
+      <%= form_for @conn, Routes.phrase_path(@conn, :show),
+        [method: :get, enforce_utf8: false, class: "form-inline ml-auto"],
+        fn f -> %>
+
+        <%= text_input f, :phrase, value: nil, class: "form-control mr-md-2",
+          placeholder: "Enter phrase" %>
+
+        <%= submit "Go!", class: "btn btn-outline-info" %>
+      <% end %>
+    </div>
+  </div>
+</nav>
