@@ -3,6 +3,6 @@ defmodule SeeNoonQuitWeb.PhraseControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"
-    assert html_response(conn, 200) =~ "SeeNoonQuit"
+    assert html_response(conn, 200) =~ "See Noon Quit"
   end
 end
